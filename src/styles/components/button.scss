@@ -1,0 +1,12 @@
+@import '../variables';
+
+.button{
+  height: 48px;
+  background-color: $primary;
+  text-transform: uppercase;
+  border: 2px solid $primary;
+  border-radius: 8px;
+  font-weight: 600;
+  color: $white;
+  width: 100%;
+}

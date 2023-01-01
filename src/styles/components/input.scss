@@ -1,0 +1,9 @@
+@import '../variables';
+
+.input{
+  height: 50px;
+  padding: 0 16px;
+  border: 2px solid $inactive;
+  border-radius: 5px;
+  width: 100%;
+}
