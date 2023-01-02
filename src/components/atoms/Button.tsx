@@ -2,14 +2,14 @@
 // styles
 import '../../styles/components/button.scss'
 
-type ButtonProps ={
-  value : string,
+type ButtonProps = {
+  children : React.ReactNode,
 }
 
-export default function Button({value}:ButtonProps) {
+export default function Button({children}:ButtonProps) {
   return (
     <>
-      <button className='button'>{value}</button>
+      <button className='button'>{children}</button>
     </>
   )
 }

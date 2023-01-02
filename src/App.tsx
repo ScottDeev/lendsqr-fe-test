@@ -1,10 +1,12 @@
 import React from 'react';
-import Login from './pages/login/Login';
+import Dashboard from './pages/Dashboard/Dashboard';
+// import Login from './pages/login/Login';
 
 function App() {
   return (
     <div className="App">
-      <Login/>
+      {/* <Login/> */}
+      <Dashboard/>
     </div>
   );
 }

@@ -1,8 +1,8 @@
 // styles
 import { useState } from 'react'
-import '../../styles/components/loginform.scss'
-import Button from '../atoms/Button'
-import Input from '../atoms/Input'
+import '../../../styles/components/loginform.scss'
+import Button from '../../atoms/Button'
+import Input from '../../atoms/Input'
 
 export default function LoginForm() {
   const [email, setEmail] = useState('')
@@ -33,7 +33,11 @@ export default function LoginForm() {
           <span className='password-toogle' onClick={toggle}>SHOW</span>
         </label>
         <span className='forgot-password'>Forgot PASSWORD?</span>
-        <Button value='Log In'/>
+        <div style={{width: '100%'}}>
+          <Button>
+            Log In
+          </Button>
+        </div>
       </form>
     </section>
   )

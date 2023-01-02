@@ -6,12 +6,12 @@ import LoginImage from '../../assets/images/signinImage.png'
 
 // styles
 import '../../styles/login.scss'
-import LoginForm from "../../components/molecules/LoginForm";
+import LoginForm from "../../components/molecules/LoginForm/LoginForm";
 
 export default function Login() {
   return (
     <main className="login-main">
-      <Logo/>
+      <Logo height='36px'/>
       <div className="login-section">
         <div className="col-6-lg">
           <img src={LoginImage} alt="login" />
