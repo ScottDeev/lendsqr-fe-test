@@ -1,0 +1,72 @@
+@import '../variables';
+%display{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  color: $text;
+  font-weight: 400;
+  padding: 10px 30px;
+}
+aside{
+  position: absolute;
+  font-family: 'Work Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 41px;
+  width: 283px;
+  margin-top: 139px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
+}
+.aside-header{
+  font-size: 16px;
+}
+.dashboard{
+  margin-top: 10px;
+}
+.flex-r-10{
+  @extend %display;
+}
+.side-link{
+  cursor: pointer;
+}
+.side-link:hover{
+  background: rgba($color: $active, $alpha: 0.06);
+  border-left: 3px solid $active;
+}
+.side-link.active{
+  background: rgba($color: $active, $alpha: 0.06);
+  border-left: 3px solid $active;
+}
+.links{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+.links-header{
+  font-size: 12px;
+  color: $inactive;
+  font-weight: 500;
+  padding: 0 30px;
+}
+.logout-div{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px 0;
+  margin-top: 31px;
+  .version{
+    font-size: 12px;
+    padding: 0 30px;
+  }
+  .divider{
+    position: absolute;
+    width: 282px;
+    left: -30px;
+    top: 0;
+    border-top: 1px solid $primary;
+    opacity: 0.1;
+  }
+}
