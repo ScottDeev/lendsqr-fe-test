@@ -1,4 +1,5 @@
 // icons
+import { Link } from 'react-router-dom'
 import dropdown from '../../../assets/icons/filterIcon.svg'
 import threeDots from '../../../assets/icons/threeDotsIcon.svg'
 
@@ -20,7 +21,7 @@ export default function UsersData({users}:any) {
       </div>
       <div className=''>
           {users && users.map((user:any) => (
-            <div className='user-data-header' key={user.id}>
+            <Link to={`/user/${user.id}`} className='user-data-header' key={user.id}>
               <span className=' detail'>{user.orgName}</span>
               <span className=' detail'>{user.userName}</span>
               <span className=' detail'>{user.email}</span>
@@ -30,7 +31,7 @@ export default function UsersData({users}:any) {
                 <span>Active</span>
                 <img src={threeDots} alt="" />
               </div>
-            </div>
+            </Link>
           ))}
       </div>
     </div>

@@ -1,0 +1,161 @@
+@import '../variables';
+
+%card{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+}
+.user{
+  padding-left: 333px;
+  padding-top: 160px;
+  padding-right: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  font-family: 'Work Sans', sans-serif;
+  .header-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    .back{
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+    }
+    .head-button{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      span{
+        font-size: 24px;
+        font-weight: 500;
+        color: $text;
+      }
+      .buttons{
+        display: flex;
+        gap: 20px;
+        button{
+          padding: 12px 16px;
+          text-transform: uppercase;
+          font-size: 14px;
+          font-weight: 600;
+          border-radius: 8px;
+          background: $white;
+          cursor: pointer;
+        }
+        .blacklist{
+          color: $blacklist;
+          border: 1px solid $blacklist
+        }
+        .activate{
+          color: $active;
+          border: 1px solid $active
+        }
+      }
+    }
+  }
+}
+.user-header{
+  @extend %card;
+  gap: 50px;
+  padding: 0 30px;
+  padding-top: 30px;
+
+  .user-profile-head{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+    color: $inactive;
+    .avatar-name{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 20px;
+      .avatar{
+        img{
+          border-radius: 50%;
+        }
+      }
+      .name{
+        h1{
+          font-weight: 500;
+          color: $text;
+        }
+      }
+    }
+    .tier{
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding: 30px;
+      border-left: 1px solid rgba($color: $inactive, $alpha: 0.2);
+      border-right: 1px solid rgba($color: $inactive, $alpha: 0.2);
+      .rate{
+        display: flex;
+        gap: 5.5px;
+      }
+    }
+    .account{
+      color: $text;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      .balance{
+        font-size: 22px;
+        font-weight: 500;
+      }
+    }
+  }
+  .header-labels{
+    display: flex;
+    justify-content: space-between;
+    .head{
+      padding: 10px 30px;
+      font-family: 'SF-Compact-Text';
+    }
+    .active{
+      color: $primary;
+      border-bottom: 2px solid $primary;
+      font-family: 'Work Sans' sans-serif;
+    }
+  }
+}
+.user-details{
+  @extend %card;
+  padding: 30px;
+  .wrapper{
+    margin-bottom: 30px;
+    .header{
+      font-weight: 500;
+      color: $text;
+    }
+  }
+  .flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 30px 0;
+    border-bottom: 1px solid rgba($color: $text, $alpha: 0.1);
+    gap: 30px;
+    // justify-content: space-between;
+    word-wrap: break-word;
+    div{
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      span{
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 400;
+      }
+      p{
+        font-weight: 500;
+      }
+    }
+  }
+}
