@@ -1,25 +1,18 @@
-import useAxios from '../../../assets/API/useAxios';
 // icons
 import dropdown from '../../../assets/icons/filterIcon.svg'
+import threeDots from '../../../assets/icons/threeDotsIcon.svg'
+
 // styles
 import '../../../styles/components/users.scss'
-// data
+// header data
 const header = ['organization', 'username', 'email', 'phone number', 'date joined', 'status']
-export default function UsersData() {
-  const { response} = useAxios({
-    url: '/users',
-    headers: JSON.stringify({ accept: '*/*' }),
-  });
-  console.log(response);
-  
-  localStorage.setItem('users', JSON.stringify(response));
 
-  const users = JSON.parse(localStorage.getItem('users')|| "");
+export default function UsersData({users}:any) {
   return (
     <div className='user-data'>
       <div className='user-data-header'>
         {header.map((h:string) =>(
-          <div key={h}>
+          <div className='head' key={h}>
             <h2>{h}</h2>
             <img src={dropdown} alt="dropdown" />
           </div>
@@ -28,12 +21,15 @@ export default function UsersData() {
       <div className=''>
           {users && users.map((user:any) => (
             <div className='user-data-header' key={user.id}>
-              <span>{user.orgName}</span>
-              <span>{user.userName}</span>
-              <span>{user.email}</span>
-              <span>{user.phoneNumber}</span>
-              <span>{new Date( Date.parse(user.createdAt)).toUTCString()}</span>
-              <span>status</span>
+              <span className=' detail'>{user.orgName}</span>
+              <span className=' detail'>{user.userName}</span>
+              <span className=' detail'>{user.email}</span>
+              <span className=' detail'>{user.phoneNumber}</span>
+              <span className=' detail'>{new Date( Date.parse(user.createdAt)).toUTCString()}</span>
+              <div className='status-wrapper detail'>
+                <span>Active</span>
+                <img src={threeDots} alt="" />
+              </div>
             </div>
           ))}
       </div>

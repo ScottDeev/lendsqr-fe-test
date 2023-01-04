@@ -50,8 +50,10 @@
   .user-data-header{
     display: flex;
     flex-direction: row;
+    border-bottom: 1px solid rgba(33, 63, 125, 0.1);
+    align-items: center;
     // justify-content: space-between;
-    div{
+    .head{
       display: flex;
       flex-direction: row;
       gap: 10px;
@@ -63,13 +65,23 @@
         font-weight: 600;
       }
     }
-    span{
+    .detail{
       display: inline-block;
       width: 170px;
       word-wrap: break-word;
       padding: 20px 10px;
-      border-bottom: 1px solid rgba(33, 63, 125, 0.1);
       font-weight: 400;
+    }
+    .status-wrapper{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      span{
+        padding: 7px 14px;
+        border-radius: 100px;
+        color: $active;
+        background: rgba($color: $active, $alpha: 0.06);
+      }
     }
   }
 }
