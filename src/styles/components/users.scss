@@ -78,14 +78,39 @@
       font-weight: 400;
     }
     .status-wrapper{
+      position: relative;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      span{
+      .status{
         padding: 7px 14px;
         border-radius: 100px;
         color: $active;
         background: rgba($color: $active, $alpha: 0.06);
+      }
+      .details-popup{
+        position: absolute;
+        top: 60px;
+        right: -100px;
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px;
+        background: $white;
+        z-index: 50;
+        border: 1px solid rgba(84, 95, 125, 0.04);
+        box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+        border-radius: 4px;
+        div{
+          display: flex;
+          gap: 10px;
+          a{
+            text-decoration: none;
+          }
+        }
+      }
+      .details-popup.show{
+        display: flex;
       }
     }
   }
