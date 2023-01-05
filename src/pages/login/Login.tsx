@@ -13,12 +13,10 @@ export default function Login() {
     <main className="login-main">
       <Logo height='36px'/>
       <div className="login-section">
-        <div className="col-6-lg">
+        <div className="col-6-lg login-image">
           <img src={LoginImage} alt="login" />
         </div>
-        <div className="col-6-lg">
-          <LoginForm/>
-        </div>
+        <LoginForm/>
       </div>
     </main>
   )

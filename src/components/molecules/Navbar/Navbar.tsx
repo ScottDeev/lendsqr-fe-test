@@ -22,7 +22,7 @@ export default function Navbar({toggleSideBar}:any) {
     <nav className="nav col-12-xs">
       <div className="logo-search col-6-xs">
         <div className="toggle-logo col-6-xs">
-          <img onClick={toggleSideBar} src={toggle} alt="toggle" />
+          <img className="toggle" onClick={toggleSideBar} src={toggle} alt="toggle" />
           <Logo height='30px' width='50%'/>
         </div>
         <form className="form col-6-xs">

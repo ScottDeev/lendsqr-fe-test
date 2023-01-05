@@ -19,7 +19,7 @@ export default function LoginForm() {
     
   }
   return (
-    <section className="form-container">
+    <section className="form-container col-6-lg">
       <header>
         <h1>Welcome!</h1>
         <p>Enter details to login.</p>

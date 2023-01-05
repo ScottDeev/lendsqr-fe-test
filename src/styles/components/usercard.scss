@@ -69,6 +69,7 @@
     display: flex;
     flex-direction: row;
     gap: 30px;
+    flex-wrap: wrap;
     align-items: center;
     color: $inactive;
     .avatar-name{
@@ -113,7 +114,8 @@
   }
   .header-labels{
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
     .head{
       padding: 10px 30px;
       font-family: 'SF-Compact-Text';
@@ -157,5 +159,47 @@
         font-weight: 500;
       }
     }
+  }
+}
+@media (max-width:500px){
+  .user{
+    padding-left: 20px;
+    padding-right: 20px;
+    .header-labels{
+      flex-direction: column;
+    }
+    .user-profile-head{
+      justify-content: center;
+      .avatar-name{
+        flex-direction: column;
+        .name{
+          text-align: center;
+        }
+      }
+    }
+    .header-wrapper{
+      .head-button{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+      }
+    }
+  }
+}
+@media (min-width:501px) and (max-width: 767px){
+  .user{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media ((min-width:768px) and (max-width: 1099px)){
+  .user{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media (min-width:1099px) and (max-width: 1200px){
+  .user{
+    padding-left: 250px;
   }
 }

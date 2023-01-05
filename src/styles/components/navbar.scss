@@ -21,6 +21,9 @@
   }
   .toggle-logo{
     @extend %display;
+    .toggle{
+      display: none;
+    }
   }
   .form{
     @extend %display;
@@ -74,6 +77,20 @@
   .nav{
     .form{
       display: none;
+    }
+    .toggle-logo{
+      .toggle{
+        display: block;
+      }
+    }
+  }
+}
+@media (max-width: 1099px){
+  .nav{
+    .toggle-logo{
+      .toggle{
+        display: block;
+      }
     }
   }
 }
