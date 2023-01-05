@@ -31,7 +31,7 @@ export default function Pagination() {
     <>
     <UsersData users={currentItems}/>
     <div className="pagination-container">
-      <div className="select-wrapper">
+      <div className="select-container">
         <label>
               Showing
               <div className="select-wrapper">

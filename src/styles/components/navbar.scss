@@ -13,10 +13,13 @@
   justify-content: space-between;
   padding: 35px 30px;
   background: $white;
-  z-index: 50;
+  z-index: 500;
   font-family: 'Work Sans', sans-serif;
   box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
   .logo-search{
+    @extend %display;
+  }
+  .toggle-logo{
     @extend %display;
   }
   .form{

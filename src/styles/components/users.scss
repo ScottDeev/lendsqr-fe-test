@@ -86,3 +86,66 @@
     }
   }
 }
+@media (max-width:500px){
+  .users{
+    padding-left: 20px;
+    padding-right: 20px;
+    .user-data{
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .head.hide-xxs{
+      display: none;
+    }
+    .detail.hide-xxs{
+      display: none;
+    }
+    .head.hide-xs{
+      display: none;
+    }
+    .detail.hide-xs{
+      display: none;
+    }
+    .head.hide-md{
+      display: none;
+    }
+    .detail.hide-md{
+      display: none;
+    }
+  }
+}
+@media (min-width:501px) and (max-width: 767px){
+  .users{
+    padding-left: 20px;
+    padding-right: 20px;
+    .head.hide-xs{
+      display: none;
+    }
+    .detail.hide-xs{
+      display: none;
+    }
+    .head.hide-md{
+      display: none;
+    }
+    .detail.hide-md{
+      display: none;
+    }
+  }
+}
+@media ((min-width:768px) and (max-width: 1099px)){
+  .users{
+    padding-left: 20px;
+    padding-right: 20px;
+    .head.hide-md{
+      display: none;
+    }
+    .detail.hide-md{
+      display: none;
+    }
+  }
+}
+@media (min-width:1099px) and (max-width: 1200px){
+  .users{
+    padding-left: 250px;
+  }
+}

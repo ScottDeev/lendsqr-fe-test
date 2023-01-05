@@ -7,6 +7,7 @@
 .pagination-wrapper{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   gap: 20px;
   li::marker{
@@ -30,7 +31,7 @@
   border-radius: 4px;
   cursor: pointer;
 }
-.select-wrapper{
+.select-container{
   color: $inactive;
   label{
     display: flex;
@@ -59,5 +60,14 @@
       position: absolute;
       z-index: -10;
     }
+  }
+}
+@media (max-width: 767px){
+  .pagination-container{
+    flex-direction: column;
+    gap: 20px;
+  }
+  .select-container{
+    padding-left: 40px;
   }
 }

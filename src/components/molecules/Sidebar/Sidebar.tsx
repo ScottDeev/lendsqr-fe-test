@@ -10,9 +10,9 @@ import signOut from '../../../assets/icons/sign-out.svg'
 // styles
 import '../../../styles/components/sidebar.scss'
 
-export default function Sidebar() {
+export default function Sidebar({sideBar}:any) {
   return (
-    <aside data-testid="sidebar">
+    <aside className={`aside ${sideBar ? 'show': ''}`} data-testid="sidebar">
       <div className="aside-header flex-r-10">
         <img src={organisation} alt="organisation" />
         <span>Switch Organisation</span>

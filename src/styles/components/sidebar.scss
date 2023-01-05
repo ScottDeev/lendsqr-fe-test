@@ -8,7 +8,7 @@
   font-weight: 400;
   padding: 10px 30px;
 }
-aside{
+.aside{
   position: absolute;
   font-family: 'Work Sans', sans-serif;
   display: flex;
@@ -17,6 +17,8 @@ aside{
   width: 283px;
   padding-top: 139px;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
+  z-index: 50;
+  background: $white;
 }
 .aside-header{
   font-size: 16px;
@@ -68,5 +70,20 @@ aside{
     top: 0;
     border-top: 1px solid $primary;
     opacity: 0.1;
+  }
+}
+@media (max-width: 1099px){
+  .aside{
+    left: -282px;
+    transition: 1s ease all;
+  }
+  .aside.show{
+    left: 0;
+    transition: 1s ease all;
+  }
+}
+@media (min-width:1099px) and (max-width: 1200px){
+  .aside{
+    width: 200px;
   }
 }

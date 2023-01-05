@@ -12,14 +12,19 @@ import dropdown from '../../../assets/icons/dropdown.svg'
 
 // image
 import profile from '../../../assets/images/profile.png'
+import toggle from '../../../assets/icons/toggle.svg'
 
 
-export default function Navbar() {
+
+export default function Navbar({toggleSideBar}:any) {
   const [query, setQuery] = useState('')
   return (
     <nav className="nav col-12-xs">
       <div className="logo-search col-6-xs">
-        <Logo height='30px' width='50%'/>
+        <div className="toggle-logo col-6-xs">
+          <img onClick={toggleSideBar} src={toggle} alt="toggle" />
+          <Logo height='30px' width='50%'/>
+        </div>
         <form className="form col-6-xs">
           <label>
             <Input type="text" value={query} placeholder="Search for anything" handleChange={(e) => setQuery(e.target.value)}/>
