@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
 
-axios.defaults.baseURL = 'https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1';
+const baseURL = 'https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1';
 
-const useAxios = ({ url, headers = null }:any) => {
+const useAxios = ({ url }:any) => {
     const [response, setResponse] = useState(null);
     const [error, setError] = useState('');
 
@@ -11,7 +10,7 @@ const useAxios = ({ url, headers = null }:any) => {
 
     useEffect(() => {
         const fetchData = () => {
-            axios.get(url, JSON.parse(headers))
+            fetch(`${baseURL}${url}`)
                 .then((res:any) => {
                     setResponse(res.data);
                 })
@@ -20,7 +19,8 @@ const useAxios = ({ url, headers = null }:any) => {
                 })
         };
         fetchData()
-    }, [url, headers]);
+        console.log(`${baseURL}${url}`);
+    }, [url]);
 
     return { response, error };
 };

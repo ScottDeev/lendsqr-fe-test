@@ -12,7 +12,7 @@ import '../../../styles/components/sidebar.scss'
 
 export default function Sidebar() {
   return (
-    <aside>
+    <aside data-testid="sidebar">
       <div className="aside-header flex-r-10">
         <img src={organisation} alt="organisation" />
         <span>Switch Organisation</span>

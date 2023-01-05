@@ -1,21 +1,19 @@
-import useAxios from '../../../assets/API/useAxios'
 // styles
 import '../../../styles/components/usercard.scss'
 // icons
 import back from '../../../assets/icons/backIcon.svg'
 import UserHeader from '../UserHeader/UserHeader'
 import { Link, useParams } from 'react-router-dom';
+import { useFetch } from '../../../assets/API/useFetch';
 
 export default function UserCard() {
   const {id} = useParams()
   console.log(id);
   
-  const { response} = useAxios({
-    url: `/users/${id}`,
-    headers: JSON.stringify({ accept: '*/*' }),
-  });
-  console.log(response);
-  localStorage.setItem('user', JSON.stringify(response));
+  const {data} = useFetch(
+  `/users/${id}`,
+  );
+  localStorage.setItem('user', JSON.stringify(data));
   const user = JSON.parse(localStorage.getItem('user')|| "");
   return (
     <div className="user">

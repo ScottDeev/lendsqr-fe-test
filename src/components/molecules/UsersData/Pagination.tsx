@@ -1,22 +1,16 @@
 import React, { useState } from "react";
 import ReactPaginate from "react-paginate";
-import useAxios from "../../../assets/API/useAxios";
 import UsersData from "./UsersData";
 // styles
 import '../../../styles/components/pagination.scss'
+import { useFetch } from "../../../assets/API/useFetch";
 
 export default function Pagination() {
-  const [usersDisplayed, setUsersDisplayed] = useState<any>(10)
-
-  const { response} = useAxios({
-    url: '/users',
-    headers: JSON.stringify({ accept: '*/*' }),
-  });
-  console.log(response);
-  
-  localStorage.setItem('users', JSON.stringify(response));
+  const {data} = useFetch('/users')
+  localStorage.setItem('users', JSON.stringify(data));
   const items = JSON.parse(localStorage.getItem('users')|| "");
 
+  const usersDisplayed = 10;
   // Here we use item offsets; we could also use page offsets
   // following the API or data you're working with.
   const [itemOffset, setItemOffset] = useState(0);
@@ -26,8 +20,8 @@ export default function Pagination() {
   // from an API endpoint with useEffect and useState)
   const endOffset = itemOffset + usersDisplayed;
   const currentItems = items?.slice(itemOffset, endOffset);
-  const pageCount = Math.ceil(items?.length / usersDisplayed);
-
+  const pageCount = Math.ceil(items?.length / usersDisplayed);    
+  
   // Invoke when user click to request another page.
   const handlePageClick = (event:any) => {
     const newOffset = (event.selected * usersDisplayed) % items?.length;
@@ -41,17 +35,14 @@ export default function Pagination() {
         <label>
               Showing
               <div className="select-wrapper">
-                <select value={usersDisplayed} onChange={(e:React.ChangeEvent<HTMLSelectElement>) => setUsersDisplayed(e.target.value)}>
-                  <option value={10}>10</option>
-                  <option value={20}>20</option>
-                  <option value={50}>50</option>
-                  <option value={100}>100</option>
+                <select defaultValue="10">
+                  <option value="10">10</option>
                 </select>
               </div>
               out of 100
             </label>
       </div>
-      <ReactPaginate
+      {items && <ReactPaginate
           breakLabel="..."
           nextLabel=">"
           containerClassName="pagination-wrapper"
@@ -64,7 +55,7 @@ export default function Pagination() {
           pageRangeDisplayed={5}
           pageCount={pageCount}
           previousLabel="<"
-        />
+        />}
     </div>
     </>
   )

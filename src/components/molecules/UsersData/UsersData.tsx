@@ -19,7 +19,7 @@ export default function UsersData({users}:any) {
           </div>
         ))}
       </div>
-      <div className=''>
+      <div data-testid="users-data" className=''>
           {users && users.map((user:any) => (
             <Link to={`/user/${user.id}`} className='user-data-header' key={user.id}>
               <span className=' detail'>{user.orgName}</span>
