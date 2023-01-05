@@ -7,7 +7,7 @@ type InputProps = {
   type: string,
   value: string,
   placeholder: string,
-  handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void
+  handleChange?: (event: React.ChangeEvent<HTMLInputElement>) => void
 }
 
 export default function Input({type, value, placeholder, handleChange}: InputProps) {

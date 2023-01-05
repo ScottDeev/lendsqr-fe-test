@@ -1,21 +1,28 @@
 // icons
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import dropdown from '../../../assets/icons/filterIcon.svg'
 import threeDots from '../../../assets/icons/threeDotsIcon.svg'
 
 // styles
 import '../../../styles/components/users.scss'
+import FilterForm from '../filterForm/FilterForm'
 // header data
 const header = ['organization', 'username', 'email', 'phone number', 'date joined', 'status']
 
 export default function UsersData({users}:any) {
+  const [filterForm, setFilterForm] = useState(false)
+  const toggleFilterForm = () => {
+    filterForm ? setFilterForm(false) : setFilterForm(true)
+  }
   return (
     <div className='user-data'>
+      <FilterForm show={filterForm}/>
       <div className='user-data-header'>
         {header.map((h:string) =>(
           <div className={`head ${h === 'email' ? 'hide-md': ''} ${h === 'phone number' ? 'hide-xs': ''} ${h === 'date joined' ? 'hide-xs': ''} ${h === 'organization' ? 'hide-xxs': ''}`} key={h}>
             <h2>{h}</h2>
-            <img src={dropdown} alt="dropdown" />
+            <img onClick={toggleFilterForm} src={dropdown} alt="dropdown" />
           </div>
         ))}
       </div>

@@ -47,6 +47,7 @@
 }
 .user-data{
   @extend %cardBorder;
+  position: relative;
   .user-data-header{
     display: flex;
     flex-direction: row;
@@ -64,6 +65,9 @@
         text-transform: uppercase;
         font-size: 14px;
         font-weight: 600;
+      }
+      img{
+        cursor: pointer;
       }
     }
     .detail{

@@ -3,7 +3,7 @@
 .input{
   height: 50px;
   padding: 0 16px;
-  border: 2px solid $inactive;
+  border: 2px solid rgba($color: $inactive, $alpha: 0.2);
   border-radius: 8px;
   width: 100%;
 }

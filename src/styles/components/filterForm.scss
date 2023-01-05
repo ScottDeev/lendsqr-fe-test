@@ -1,0 +1,61 @@
+@import '../variables';
+
+.filter-form.hide{
+  display: none;
+}
+.filter-form{
+  position: absolute;
+  top: 80px;
+  left: 15px;
+  width: 270px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: 'Work Sans', sans-serif;
+  border: 1px solid rgba(84, 95, 125, 0.14);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 4px;
+  padding: 30px 20px;
+  z-index: 50;
+  background: $white;
+  label{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    span{
+      font-size: 14px;
+      font-weight: 500;
+    }
+  }
+  .select{
+    .css-13cymwt-control{
+      height: 50px;
+      padding: 0 16px;
+      border: 2px solid rgba($color: $inactive, $alpha: 0.2);
+      border-radius: 8px;
+      width: 100%;
+    }
+  }
+  .buttons{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    button{
+      padding: 12px 30px;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 8px;
+      background: $white;
+      cursor: pointer;
+    }
+    .reset-btn{
+      color: $inactive;
+      border: 1px solid $inactive;
+    }
+    .filter-btn{
+      color: $white;
+      border: 1px solid $primary;
+      background: $primary;
+    }
+  }
+}
