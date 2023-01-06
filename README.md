@@ -76,9 +76,10 @@ Technologies used
 3. Git
 
 # Link and paths
-1. Login page - '/login'
-2. Dashboard page - '/'
-3. User Details Page - '/user/{unique_id}'
+1. [Main Link]('https://ameh-elijah-lendsqr-fe-test.netlify.app/')
+2. Login page - '/login'
+3. Dashboard page - '/'
+4. User Details Page - '/user/{unique_id}'
 # Challenges
 
 Some of the major challenges faced on these project are as follows
