@@ -13,6 +13,11 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
+  .page-header{
+    font-size: 24px;
+    font-weight: 500;
+    color: $text;
+  }
 }
 .card-wrapper{
   display: flex;
@@ -87,6 +92,9 @@
         border-radius: 100px;
         color: $active;
         background: rgba($color: $active, $alpha: 0.06);
+      }
+      img{
+        cursor: pointer;
       }
       .details-popup{
         position: absolute;

@@ -8,7 +8,7 @@ export default function Users() {
 
   return (
     <div className="users">
-      <h1>Users</h1>
+      <span className='page-header'>Users</span>
       <DashboardCard/>
       <Pagination/>
     </div>
