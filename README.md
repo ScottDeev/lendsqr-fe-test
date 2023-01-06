@@ -76,7 +76,7 @@ Technologies used
 3. Git
 
 # Link and paths
-1. [Main Link]('https://ameh-elijah-lendsqr-fe-test.netlify.app/')
+1. [Main Link](https://ameh-elijah-lendsqr-fe-test.netlify.app/)
 2. Login page - '/login'
 3. Dashboard page - '/'
 4. User Details Page - '/user/{unique_id}'
