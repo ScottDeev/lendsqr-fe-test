@@ -3,7 +3,7 @@ import Navbar from "../../components/molecules/Navbar/Navbar";
 import Sidebar from "../../components/molecules/Sidebar/Sidebar";
 import Users from "../../components/molecules/Users/Users";
 // style
-import '../../styles/dashboaed.scss'
+import '../../styles/dashboard.scss'
 export default function Dashboard() {
   const [sideBar, setSideBar] = useState(false)
   const toggleSideBar = () => {
